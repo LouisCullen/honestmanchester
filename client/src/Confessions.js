@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import Moment from 'moment';
 import './App.css';
 
 
@@ -33,7 +34,7 @@ export const Confessions = () => {
             .catch((e) => {
                 console.log(e.message);
             })
-    })
+    }, [])
         // console.log(confessions);
     
     // console.log(confessions);
@@ -44,14 +45,14 @@ export const Confessions = () => {
     return(
         <>
         <div className='row' id='confessions-row'>
-            {contentItems.map((data, key) =>{
+            {contentItems.slice(0).reverse().map((data, key) =>{
                 return(
                     <div key={key}>
                         <Confession 
                             key = {key}
                             university = {data.university}
                             content = {data.content}
-                            date = {data.date}
+                            date = {Moment(data.date).format('DD MM YYYY')}
                         />
                     </div>
                 )}

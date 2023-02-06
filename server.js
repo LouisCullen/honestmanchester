@@ -12,7 +12,7 @@ app.get('/express_backend', async (req, res) => {
 });
 
 mongoose.connect(
-    process.env.MONGODB_URI, 
+    'mongodb+srv://admin:Dd48P2zMEKKiPiRj@cluster0.rmyafyl.mongodb.net/honestmanchester', 
     {
         useNewUrlParser: true,
         useUnifiedTopology: true
