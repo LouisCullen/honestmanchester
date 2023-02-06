@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import { Confessions } from './Confessions';
-import { ConfessionForm } from './ConfessionForm';
+// import { Confessions } from './Confessions';
+import * as ReactDOM from 'react-dom/client';
+import  ConfessionForm from './ConfessionForm';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -25,10 +26,26 @@ state = {
     return body;
   };
 
+  confessHandler(event){
+    const root = ReactDOM.createRoot(
+      document.getElementById('site-content')
+    );
+    root.render(<ConfessionForm />);
+  }
+
   render() {
     return (
-      <div className="container" id="site-content">
-        <Confessions /> 
+      <div className='site'>
+        <nav className="sticky-top navbar navbar-style navbar-light bg-light">
+          <div id='brand-div'>
+            <h1>Honest Manchester</h1>
+            <small>Anonymous confessions</small>
+          </div>
+          <button className='navbar-confession btn btn-confess' onClick={this.confessHandler}>Confess</button>
+        </nav>
+        <div className="container" id="site-content">
+          <ConfessionForm /> 
+        </div>
       </div>
     );
   }

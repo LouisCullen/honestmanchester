@@ -13,7 +13,15 @@ code {
 }
 
 body{
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  /* font-family: Verdana, Geneva, Tahoma, sans-serif; */
+  background-color: #718093;
+}
+
+.navbar-style{
+  box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.5);
+  padding: 20px;
+  background-color: #353b48;
+  ;
 }
 
 #confession-form{
@@ -25,6 +33,13 @@ body{
   margin-top: 10px;
   width: 100%;
   justify-content: left;
+  background-color: #2f3640;
+  color: #f5f6fa;
+}
+
+#confession-form textarea, .form-check-input{
+  background-color: #353b48;
+  color: #f5f6fa;
 }
 
 #confession-form > .form-group{
@@ -32,7 +47,8 @@ body{
 }
 
 #confession-form-row, #confessions-row{
-  width: 60%;
+  width: 100%;
+  max-width: 700px;
 }
 
 .confession-box{
@@ -44,10 +60,34 @@ body{
   margin-top: 10px;
   width: 100%;
   justify-content: left;
+  background-color: #2f3640;
+  color: #f5f6fa;
 }
 
 #site-content{
   display: flex;
   justify-content: center;
   align-content: center;
+  padding-top: 40px;
 }
+
+.btn-confess{
+  background-color: #c23616;
+  color: #f5f6fa;
+}
+
+.btn-confess:hover {
+  background-color: #44bd32;
+  color: #f5f6fa;
+}
+
+.form-group small{
+  color: #dcdde1 !important;
+}
+
+#brand-div h1{
+  padding-bottom: 0;
+  margin-bottom: -5px;
+  margin-left: -3px;
+}
+
