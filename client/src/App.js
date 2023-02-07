@@ -4,6 +4,7 @@ import * as ReactDOM from 'react-dom/client';
 import  ConfessionForm from './ConfessionForm';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
+export const API_URL = "honestmanchester.com";
 
 class App extends Component {
 state = {

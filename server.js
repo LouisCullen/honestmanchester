@@ -1,4 +1,5 @@
 const express = require('express');
+const path = require('path');
 const app = express();
 const port = process.env.PORT || 5000;
 const mongoose = require('mongoose');
@@ -6,9 +7,17 @@ require("dotenv").config();
 
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
+app.use(express.static(path.join(__dirname, 'client', 'build')));
 
 
-app.listen(port, () => console.log(`App available on http://localhost:${port}`));
+// remove for dev
+// app.use(cors({ 
+//     origin: "frontend_URL", 
+//     credentials: true 
+// }));
+
+
+app.listen(port, () => console.log(`App available on ${port}`));
 
 app.get('/express_backend', async (req, res) => {
     res.send({express: 'Your express backend is connected to React'})
@@ -69,3 +78,7 @@ app.post('/submit_content', (req, res) => {
         console.log("New entry saved to DB");
     })
 });
+
+app.use('*', function (request, response) {
+    response.sendFile(path.join(__dirname, 'client', 'build', 'index.html'));
+  });
