@@ -47,14 +47,12 @@ export const Confessions = () => {
         <div className='row' id='confessions-row'>
             {contentItems.slice(0).reverse().map((data, key) =>{
                 return(
-                    <div key={key}>
                         <Confession 
                             key = {key}
                             university = {data.university}
                             content = {data.content}
                             date = {Moment(data.date)}
                         />
-                    </div>
                 )}
             )}
         </div>
@@ -67,7 +65,7 @@ export const Confessions = () => {
 const Confession = ({university, content, date}) => {
     if (!content) return <div />;
     return(
-        <div className='confession-box row'>
+        <div className='confession-box'>
             <div className='confession-info col-2'>
                 <p className='university'>{university}</p>
                 <p className='date'>{date.format('DD MMM')}<br />{date.format('YYYY')}</p>

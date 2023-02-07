@@ -37,7 +37,7 @@ state = {
   render() {
     return (
       <div className='site'>
-        <nav className="sticky-top navbar navbar-style navbar-light bg-light">
+        <nav className="sticky-top navbar navbar-style">
           <div id='brand-div'>
             <h1>Honest Manchester</h1>
             <small>Anonymous confessions</small>

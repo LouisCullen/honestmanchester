@@ -38,84 +38,92 @@ export default class ConfessionForm extends React.Component {
         event.preventDefault();
     }
 
+    handleRatherNot(){
+        const root = ReactDOM.createRoot(
+            document.getElementById('site-content')
+        );
+        root.render(<Confessions />);
+    }
+
     render(){
         return (
             <div className="row" id="confession-form-row">
-            <form id="confession-form" onSubmit={this.handleSubmit}>
-                <h1>Submit a confession to view</h1>
-                <span className="form-group">
-                    <div className="form-check form-check-inline">
-                        <input
-                            className="form-check-input"
-                            type="radio"
-                            name="uniRadios"
-                            id="uomRadio"
-                            value="UoM"
-                            checked={this.state.uniRadios === "UoM"}
+                <form id="confession-form" onSubmit={this.handleSubmit}>
+                    <h1>Submit a confession to view</h1>
+                    <span className="form-group">
+                        <div className="form-check form-check-inline">
+                            <input
+                                className="form-check-input"
+                                type="radio"
+                                name="uniRadios"
+                                id="uomRadio"
+                                value="UoM"
+                                checked={this.state.uniRadios === "UoM"}
+                                onChange={this.handleChange}
+                            />
+                            <label className="form-check-label" htmlFor="uomRadio">
+                            UoM
+                            </label>
+                        </div>
+                        <div className="form-check form-check-inline">
+                            <input
+                                className="form-check-input"
+                                type="radio"
+                                name="uniRadios"
+                                id="mmuRadio"
+                                value="MMU"
+                                checked={this.state.uniRadios === "MMU"}
+                                onChange={this.handleChange}
+                            />
+                            <label className="form-check-label" htmlFor="uomRadio">
+                            MMU
+                            </label>
+                        </div>
+                        <div className="form-check form-check-inline">
+                            <input
+                                className="form-check-input"
+                                type="radio"
+                                name="uniRadios"
+                                id="uosRadio"
+                                value="UoS"
+                                checked={this.state.uniRadios === "UoS"}
+                                onChange={this.handleChange}
+                            />
+                            <label className="form-check-label" htmlFor="uomRadio">
+                            UoS
+                            </label>
+                        </div>
+                        <div className="form-check form-check-inline">
+                            <input
+                                className="form-check-input"
+                                type="radio"
+                                name="uniRadios"
+                                id="otherRadio"
+                                value="Other"
+                                checked={this.state.uniRadios === "Other"}
+                                onChange={this.handleChange}
+                            />
+                            <label className="form-check-label" htmlFor="uomRadio">
+                            Other
+                            </label>
+                        </div>
+                    </span>
+                    <div className="form-group">
+                        <label htmlFor="confessionTextArea">Confession</label>
+                        <textarea 
+                            required
+                            className="form-control"
+                            id="confessionTextArea"
+                            rows="8"
+                            maxLength="1024"
+                            name="content"
                             onChange={this.handleChange}
-                        />
-                        <label className="form-check-label" htmlFor="uomRadio">
-                        UoM
-                        </label>
+                        ></textarea>
+                        <small id="confessionAnonymous" className="form-text text-muted">All confessions are completely anonymous</small>
                     </div>
-                    <div className="form-check form-check-inline">
-                        <input
-                            className="form-check-input"
-                            type="radio"
-                            name="uniRadios"
-                            id="mmuRadio"
-                            value="MMU"
-                            checked={this.state.uniRadios === "MMU"}
-                            onChange={this.handleChange}
-                        />
-                        <label className="form-check-label" htmlFor="uomRadio">
-                        MMU
-                        </label>
-                    </div>
-                    <div className="form-check form-check-inline">
-                        <input
-                            className="form-check-input"
-                            type="radio"
-                            name="uniRadios"
-                            id="uosRadio"
-                            value="UoS"
-                            checked={this.state.uniRadios === "UoS"}
-                            onChange={this.handleChange}
-                        />
-                        <label className="form-check-label" htmlFor="uomRadio">
-                        UoS
-                        </label>
-                    </div>
-                    <div className="form-check form-check-inline">
-                        <input
-                            className="form-check-input"
-                            type="radio"
-                            name="uniRadios"
-                            id="otherRadio"
-                            value="Other"
-                            checked={this.state.uniRadios === "Other"}
-                            onChange={this.handleChange}
-                        />
-                        <label className="form-check-label" htmlFor="uomRadio">
-                        Other
-                        </label>
-                    </div>
-                </span>
-                <div className="form-group">
-                    <label htmlFor="confessionTextArea">Confession</label>
-                    <textarea 
-                        required
-                        className="form-control"
-                        id="confessionTextArea"
-                        rows="8"
-                        maxLength="1024"
-                        name="content"
-                        onChange={this.handleChange}
-                    ></textarea>
-                    <small id="confessionAnonymous" className="form-text text-muted">All confessions are completely anonymous</small>
-                </div>
-                <button type="submit" className="btn btn-confess">Confess</button>
-            </form>
+                    <button type="submit" className="btn btn-confess">Confess</button>
+                    <small id="ratherNot" onClick={this.handleRatherNot}>No thanks</small>
+                </form>
             </div>
         )
     }
