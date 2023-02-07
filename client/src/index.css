@@ -52,16 +52,43 @@ body{
 }
 
 .confession-box{
-  display: flex;
-  flex-direction: column;
   box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.5);
-  padding: 5%;
+  padding: 8px;
   border-radius: 10px;
   margin-top: 10px;
   width: 100%;
-  justify-content: left;
   background-color: #2f3640;
   color: #f5f6fa;
+}
+
+.confession-box p{
+  margin: 0;
+}
+
+.confession-info{
+  margin-top: 15px;
+  margin-bottom: 15px;
+  border-right: #dcdde1 solid;
+}
+
+.confession-box .university{
+  font-size: 1.5em;
+  font-weight: bolder;
+  /* border-bottom: #f5f6fa; fix this */
+}
+
+.confession-box .content{
+  font-size: 1.75em;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding-left: 30px;
+  overflow-wrap: break-word;
+}
+
+.confession-box .date{
+  font-weight: lighter;
+  font-style: italic;
+  /* border-top: #f5f6fa; fix this */
 }
 
 #site-content{

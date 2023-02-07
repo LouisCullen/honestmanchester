@@ -52,7 +52,7 @@ export const Confessions = () => {
                             key = {key}
                             university = {data.university}
                             content = {data.content}
-                            date = {Moment(data.date).format('DD MM YYYY')}
+                            date = {Moment(data.date)}
                         />
                     </div>
                 )}
@@ -67,10 +67,12 @@ export const Confessions = () => {
 const Confession = ({university, content, date}) => {
     if (!content) return <div />;
     return(
-        <div className='confession-box'>
-            <h3>{university}</h3>
-            <p>{content}</p>
-            <h4>{date}</h4>
+        <div className='confession-box row'>
+            <div className='confession-info col-2'>
+                <p className='university'>{university}</p>
+                <p className='date'>{date.format('DD MMM')}<br />{date.format('YYYY')}</p>
+            </div>
+            <p className='content col-10'>{content}</p>
         </div>
     )
 }

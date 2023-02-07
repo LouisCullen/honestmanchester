@@ -42,7 +42,7 @@ export default class ConfessionForm extends React.Component {
         return (
             <div className="row" id="confession-form-row">
             <form id="confession-form" onSubmit={this.handleSubmit}>
-                <h1>Submit a confession to enter</h1>
+                <h1>Submit a confession to view</h1>
                 <span className="form-group">
                     <div className="form-check form-check-inline">
                         <input
