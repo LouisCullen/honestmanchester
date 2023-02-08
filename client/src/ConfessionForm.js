@@ -49,8 +49,9 @@ export default class ConfessionForm extends React.Component {
         return (
             <div className="row" id="confession-form-row">
                 <form id="confession-form" onSubmit={this.handleSubmit}>
-                    <h1>Submit a confession to view</h1>
+                    <h1 className='form-group'>Submit a confession to view</h1>
                     <span className="form-group">
+                        <label>Uni</label><br />
                         <div className="form-check form-check-inline">
                             <input
                                 className="form-check-input"
@@ -61,9 +62,7 @@ export default class ConfessionForm extends React.Component {
                                 checked={this.state.uniRadios === "UoM"}
                                 onChange={this.handleChange}
                             />
-                            <label className="form-check-label" htmlFor="uomRadio">
-                            UoM
-                            </label>
+                            <label className="form-check-label" htmlFor="uomRadio">UoM</label>
                         </div>
                         <div className="form-check form-check-inline">
                             <input
