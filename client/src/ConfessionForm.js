@@ -121,7 +121,7 @@ export default class ConfessionForm extends React.Component {
                         <small id="confessionAnonymous" className="form-text text-muted">All confessions are completely anonymous</small>
                     </div>
                     <button type="submit" className="btn btn-confess">Confess</button>
-                    <small id="ratherNot" onClick={this.handleRatherNot}>No thanks</small>
+                    {/* <small id="ratherNot" onClick={this.handleRatherNot}>No thanks</small> */}
                 </form>
             </div>
         )
