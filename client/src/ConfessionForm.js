@@ -51,7 +51,7 @@ export default class ConfessionForm extends React.Component {
                 <form id="confession-form" onSubmit={this.handleSubmit}>
                     <h1 className='form-group'>Submit a confession to view</h1>
                     <span className="form-group">
-                        <label>Uni</label><br />
+                        <h4 htmlFor="uniRadios">Uni</h4>
                         <div className="form-check form-check-inline">
                             <input
                                 className="form-check-input"
@@ -108,7 +108,7 @@ export default class ConfessionForm extends React.Component {
                         </div>
                     </span>
                     <div className="form-group">
-                        <label htmlFor="confessionTextArea">Confession</label>
+                        <h4 htmlFor="confessionTextArea">Confession</h4>
                         <textarea 
                             required
                             className="form-control"

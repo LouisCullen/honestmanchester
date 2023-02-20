@@ -39,7 +39,7 @@ state = {
       <div className='site'>
         <nav className="sticky-top navbar navbar-style">
           <div id='brand-div'>
-            <h1 class="display-2">Honest Manchester</h1>
+            <h1 class="display-5">Honest Manchester</h1>
             <p>Anonymous confessions</p>
           </div>
           <button className='navbar-confession btn btn-confess' onClick={this.confessHandler}>Confess</button>
