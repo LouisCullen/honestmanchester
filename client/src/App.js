@@ -40,7 +40,7 @@ state = {
         <nav className="sticky-top navbar navbar-style">
           <div class='navbar-div'>
             <div id='brand-div'>
-              <h1 class="display-5">Honest Manchester</h1>
+              <h1 className="display-5">Honest Manchester</h1>
               <p>Anonymous confessions</p>
             </div>
             <button className='navbar-confession btn btn-confess' onClick={this.confessHandler}>Confess</button>
