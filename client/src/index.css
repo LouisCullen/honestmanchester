@@ -24,8 +24,10 @@ body{
   color: #f5f6fa;
 }
 
-.navbar-style .btn-confess{
-  aspect-ratio: 1;
+.navbar-div{
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
 }
 
 #confession-form{
@@ -158,5 +160,6 @@ body{
 
 #brand-div p{
   font-size: 1.25rem;
+  margin: 0;
 }
 
