@@ -20,7 +20,12 @@ body{
 .navbar-style{
   box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.5);
   padding: 20px;
-  background-color: #f5f6fa;
+  background-color: #2f3640;
+  color: #f5f6fa;
+}
+
+.navbar-style .btn-confess{
+  aspect-ratio: 1;
 }
 
 #confession-form{
@@ -115,12 +120,13 @@ body{
   display: flex;
   justify-content: center;
   align-content: center;
-  padding-top: 40px;
+  padding-top: 10vh;
 }
 
 .btn-confess{
   background-color: #c23616;
   color: #f5f6fa;
+  font-weight: bold;
 }
 
 .btn-confess:hover {
@@ -148,5 +154,9 @@ body{
   padding-bottom: 0;
   margin-bottom: -5px;
   margin-left: -3px;
+}
+
+#brand-div p{
+  font-size: 1.25rem;
 }
 
