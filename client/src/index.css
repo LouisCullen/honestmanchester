@@ -14,8 +14,20 @@ code {
 
 body{
   /* font-family: Verdana, Geneva, Tahoma, sans-serif; */
-  background-image: url(background.png);
-  background-attachment: fixed;
+  background-color: #353b48;
+}
+
+.bg-image{
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  z-index: -10;
+  background-image: url("background2.png");
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  background-position: bottom left;
 }
 
 .navbar-style{
